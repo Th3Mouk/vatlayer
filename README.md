@@ -8,8 +8,8 @@ This PHP library is a wrapper of vatlayer.com respecting PSR18/PSR17/PSR7.
 [![Total Downloads](https://poser.pugx.org/th3mouk/vatlayer/downloads)](https://packagist.org/packages/th3mouk/vatlayer)
 [![License](https://poser.pugx.org/th3mouk/vatlayer/license)](https://packagist.org/packages/th3mouk/vatlayer)
 
-![CI](https://github.com/th3Mouk/vatlayer/workflows/ci/badge.svg?branch=feature-1)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/th3mouk/vatlayer/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/th3mouk/vatlayer/?branch=master)
+![CI](https://github.com/th3Mouk/vatlayer/workflows/Continuous%20Integration/badge.svg?branch=main)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Th3Mouk/vatlayer/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Th3Mouk/vatlayer/?branch=main)
 [![.gitattributes](https://poser.pugx.org/th3mouk/vatlayer/gitattributes)](//packagist.org/packages/th3mouk/vatlayer)
 
 ## Installation

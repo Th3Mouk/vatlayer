@@ -4,7 +4,7 @@ on: [ push ]
 
 jobs:
   ci:
-    name: CI - PHP ${{ matrix.php }} ${{ matrix.dependency-version }}
+    name: CI - PHP ${{ matrix.php-versions }} ${{ matrix.dependency-version }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
