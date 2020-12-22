@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="4.3.1@2feba22a005a18bf31d4c7b9bdb9252c73897476">
+  <file src="src/Psr18Wrapper.php">
+    <ImpureMethodCall occurrences="5">
+      <code>createRequest</code>
+      <code>getBody</code>
+      <code>getStatusCode</code>
+      <code>requestFactory</code>
+      <code>sendRequest</code>
+    </ImpureMethodCall>
+  </file>
+  <file src="src/Response/ValidVatNumber.php">
+    <ImpureMethodCall occurrences="1">
+      <code>getBody</code>
+    </ImpureMethodCall>
+  </file>
+</files>

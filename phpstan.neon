@@ -1,0 +1,40 @@
+includes:
+  - vendor/symplify/phpstan-rules/packages/cognitive-complexity/config/cognitive-complexity-services.neon
+  - vendor/symplify/phpstan-rules/packages/object-calisthenics/config/object-calisthenics-services.neon
+
+parameters:
+  checkMissingIterableValueType: false
+  level: 8
+  paths:
+    - src
+
+services:
+    -
+      class: Symplify\PHPStanRules\CognitiveComplexity\Rules\FunctionLikeCognitiveComplexityRule
+      tags: [phpstan.rules.rule]
+      arguments:
+        maxMethodCognitiveComplexity: 8
+    -
+      class: Symplify\PHPStanRules\CognitiveComplexity\Rules\ClassLikeCognitiveComplexityRule
+      tags: [phpstan.rules.rule]
+      arguments:
+        maxClassCognitiveComplexity: 50
+    -
+      class: Symplify\PHPStanRules\ObjectCalisthenics\Rules\NoShortNameRule
+      tags: [phpstan.rules.rule]
+      arguments:
+        minNameLength: 3
+        allowedShortNames: ['id']
+    -
+      class: Symplify\PHPStanRules\ObjectCalisthenics\Rules\TooLongClassLikeRule
+      tags: [phpstan.rules.rule]
+      arguments:
+        maxClassLikeLength: 300
+    -
+       class: Symplify\PHPStanRules\ObjectCalisthenics\Rules\NoSetterClassMethodRule
+       tags: [phpstan.rules.rule]
+       arguments:
+        allowedSetterClasses: []
+    -
+      class: Symplify\PHPStanRules\ObjectCalisthenics\Rules\NoElseAndElseIfRule
+      tags: [phpstan.rules.rule]
