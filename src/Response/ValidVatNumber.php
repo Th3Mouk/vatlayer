@@ -32,6 +32,16 @@ final class ValidVatNumber
         $this->company_address = $company_address;
     }
 
+    public static function create(
+        string $query,
+        string $country_code,
+        string $vat_vumber,
+        string $company_name,
+        string $company_address
+    ): self {
+        return new self($query, $country_code, $vat_vumber, $company_name, $company_address);
+    }
+
     /**
      * @throws BadResponse
      * @throws InvalidVatNumber
