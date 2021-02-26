@@ -32,6 +32,20 @@ TXT;
     expect($response->company_address)->toBe($address);
 });
 
+test('validate() must not throw', function (string $path) {
+    $client = new MockClient(
+        new Response(
+            200,
+            ['Content-Type' => 'application/json'],
+            file_get_contents($path)
+        )
+    );
+
+    (new Psr18Wrapper('', $client, new Psr17Factory()))->validate('vat-number');
+})->with([
+    __DIR__ . '/responses/validate-success-no-infos.json',
+])->expectNotToPerformAssertions();
+
 test('validate() throwing InvalidVatNumber', function () {
     $response = new Response(
         200,

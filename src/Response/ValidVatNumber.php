@@ -70,8 +70,8 @@ final class ValidVatNumber
             Assert::stringNotEmpty($query);
             Assert::stringNotEmpty($country_code);
             Assert::stringNotEmpty($vat_vumber);
-            Assert::stringNotEmpty($company_name);
-            Assert::stringNotEmpty($company_address);
+            Assert::string($company_name);
+            Assert::string($company_address);
 
             return new self($query, $country_code, $vat_vumber, $company_name, $company_address);
         } catch (\JsonException | \InvalidArgumentException $exception) {
